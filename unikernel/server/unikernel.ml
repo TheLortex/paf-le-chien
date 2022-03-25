@@ -16,7 +16,7 @@ module Make
   (Time : Mirage_time.S)
   (Mclock : Mirage_clock.MCLOCK)
   (Pclock : Mirage_clock.PCLOCK)
-  (Stack : Mirage_stack.V4V6) = struct
+  (Stack : Tcpip.Stack.V4V6) = struct
   module DNS = Dns_client_mirage.Make(Random)(Time)(Mclock)(Stack)
   module Paf = Paf_mirage.Make(Time)(Stack)
   module Nss = Ca_certs_nss.Make(Pclock)
