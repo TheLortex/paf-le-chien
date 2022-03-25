@@ -12,7 +12,7 @@ It does the composition between the TLS encryption layer and the
 server.
 
 ```ocaml
-module Make (Time : Mirage_time.S) (Stack : Mirage_stack.V4V6) = struct
+module Make (Time : Mirage_time.S) (Stack : Tcpip.Stack.V4V6) = struct
   module P = Paf_mirage.make(Time)(Stack)
 
   let start stack =

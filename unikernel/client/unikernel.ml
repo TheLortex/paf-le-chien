@@ -28,7 +28,7 @@ module Make
   (Console : Mirage_console.S)
   (Time : Mirage_time.S)
   (Pclock : Mirage_clock.PCLOCK)
-  (_ : Mirage_stack.V4V6)
+  (_ : Tcpip.Stack.V4V6)
   (Dns : DNS) (* XXX(dinosaure): ask @hannesm to provide a signature. *)
   (Paf : Paf_mirage.S) = struct
   module Client = Paf_cohttp
